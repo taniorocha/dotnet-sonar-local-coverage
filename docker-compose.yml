@@ -1,0 +1,6 @@
+services:
+  jenkins:
+    container_name: sonar-qube
+    image: sonarqube
+    ports: 
+      - 9000:9000
