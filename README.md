@@ -1,30 +1,30 @@
-Steps to check C# project coverage using local Sonar Qube
+# Steps to check C# project coverage using local Sonar Qube
 
 Make sure you have sonar-scanner installed and environment set
 OBS: to check it just run
 
-# sonar-scanner -v
+  sonar-scanner -v
 
-1. Run the Sonar qube container
+## 1. Run the Sonar qube container
 
-# docker compose up -d
+  docker compose up -d
 
-2. Login and set password to Sonar qube running instance at
+## 2. Login and set password to Sonar qube running instance at
 
-# http://localhost:9000
+  http://localhost:9000
 
-3. Create a sonar project and token to push coverage
+## 3. Create a sonar project and token to push coverage
 
-4. Go to the C# project and build the project
+## 4. Go to the C# project and build the project
 
-# dotnet build
+  dotnet build
 
-4. Test the C# project exporting the coverage result on opencover format
+## 4. Test the C# project exporting the coverage result on opencover format
 
-# dotnet test --collect:"XPlat Code Coverage;Format=opencover"
+  dotnet test --collect:"XPlat Code Coverage;Format=opencover"
 
-3. Copy the sonar-project.properties to the root of the solution
+## 3. Copy the sonar-project.properties to the root of the solution
 
-4. Run sonar scanner
+## 4. Run sonar scanner
 
-# sonar-scanner
+  sonar-scanner
